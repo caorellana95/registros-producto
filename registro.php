@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+header('Content-Type: application/json');
 
 class Registro {
     public static function RegistroBD() {
@@ -20,7 +23,6 @@ class Registro {
 
     public static function Guardar() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
             $codigo = $_POST['codigo'] ?? '';
             $nombre = $_POST['nombre'] ?? '';
             $bodega = $_POST['bodega'] ?? '';
@@ -51,7 +53,7 @@ class Registro {
                     ':precio' => $precio,
                     ':material' => $material_json,
                     ':descripcion' => $descripcion
-                ]) or die(json_encode($stm->errorInfo()));
+                ]);
 
                 echo json_encode(["success" => "Producto registrado correctamente"]);
             } catch (PDOException $e) {
@@ -63,7 +65,6 @@ class Registro {
     }
 }
 
-
-
-
+// Llamar a la función para ejecutar la lógica
+Registro::Guardar();
 ?>

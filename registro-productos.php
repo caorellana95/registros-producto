@@ -21,7 +21,7 @@
         <div class="form-group">
             <label for="bodega">Bodega:</label>
             <select name="bodega" id="bodega"required>
-                <option value="">Seleccione una bodega</option>
+                <option value=""></option>
                 <option value="Bodega 1">Bodega 1</option>
                 <option value="Bodega 2">Bodega 2</option>
             </select>
@@ -29,7 +29,7 @@
         <div class="form-group">
             <label for="sucursal">Sucursal:</label>
             <select name="sucursal" id="sucursal" required>
-                <option value="">Seleccione una sucursal</option>
+                <option value=""></option>
                 <option value="Sucursal 1">Sucursal 1</option>
                 <option value="Sucursal 2">Sucursal 2</option>
             </select>
@@ -37,7 +37,7 @@
         <div class="form-group">
             <label for="moneda">Moneda:</label>
             <select name="moneda" id="moneda" required>
-                <option value="">Seleccione una moneda</option>
+                <option value=""></option>
                 <option value="Dolar">Dolar</option>
                 <option value="Peso">Peso</option>
                 <option value="Euro">Euro</option>
@@ -68,6 +68,7 @@
                 <input type="checkbox" id="textil" name="material[]" value="textil">
                 <label for="textil">Textil</label>
             </div>
+            <p id="errorMaterial" style="color: red; display: none;">Debe seleccionar al menos dos materiales.</p>
         </div>
     </div>
         <div class="form-group">
@@ -79,7 +80,7 @@
 
         
     </form>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
