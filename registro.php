@@ -20,7 +20,6 @@ class Registro {
 
     public static function Guardar() {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            print_r($_POST);
 
             $codigo = $_POST['codigo'] ?? '';
             $nombre = $_POST['nombre'] ?? '';
